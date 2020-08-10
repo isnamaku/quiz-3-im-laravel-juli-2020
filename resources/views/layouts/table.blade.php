@@ -19,7 +19,8 @@
                       <td>{{ $p->descProyek }}</td>
                       <td>{{ $p->tanggal_mulai }}</td>
                       <td>{{ $p->tanggal_deadline }}</td>
-                      <td>{{ $p->status }}</td>
+                      <td><?php if($p->status==0) echo"belum selesai ";
+                       else echo "sudah selesai" ?></td>
                      
                    </tr>
 
