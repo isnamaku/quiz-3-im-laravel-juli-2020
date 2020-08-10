@@ -13,7 +13,12 @@ class ItemController extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function index(){
-        return view('layouts/table');
+
+        $query = DB::table('proyek')->get();
+ 
+    	// mengirim data pegawai ke view index
+    	return view('layouts/table',['proyek' => $query]);
+       
     }
     
     public function create(){

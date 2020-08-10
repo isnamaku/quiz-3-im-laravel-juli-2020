@@ -7,12 +7,14 @@
                   </tfoot>
                   <tbody>
                     
-                    
+                  @foreach($proyek as $p)
                   <tr role="row" class="odd">
-                      <td class="sorting_1">Airi Satou</td>
-                      <td>Accountant</td>
+                      <td class="sorting_1">{{ $p->idProyek }}</td>
+                      <td>{{ $p->namaProyek }}</td>
                   
                      
                    </tr>
+
+		@endforeach
                 </table>
 @endsection
