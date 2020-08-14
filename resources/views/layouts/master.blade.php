@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Blank</title>
+  <title>Pitakon</title>
 
   <!-- Custom fonts for this template-->
 
@@ -32,11 +32,17 @@
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
+        <div class="sidebar-brand-icon ">
+
+          <img src="{{'/images/pitakon.png'}}"
+           class="brand-image img-circle elevation-3"
+           style="width:80px;"
+        >
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+  
       </a>
+
+     
 
       <!-- Divider -->
       <hr class="sidebar-divider my-0">

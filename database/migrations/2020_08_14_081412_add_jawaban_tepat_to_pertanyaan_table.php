@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStaffTable extends Migration
+class AddJawabanTepatToPertanyaanTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateStaffTable extends Migration
      */
     public function up()
     {
-        Schema::create('staff', function (Blueprint $table) {
-            $table->bigIncrements('idStaff');
-            $table->string('namaStaff');
-            $table->string('jabatan');
+        Schema::table('pertanyaan', function (Blueprint $table) {
+            $table->foreign('jawaban_tepat_id')->references('id')->on('jawaban');
         });
     }
 
@@ -27,6 +25,8 @@ class CreateStaffTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('staff');
+        Schema::table('pertanyaan', function (Blueprint $table) {
+            //
+        });
     }
 }

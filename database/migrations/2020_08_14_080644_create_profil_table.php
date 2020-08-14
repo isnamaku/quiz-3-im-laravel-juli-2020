@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateManajerTable extends Migration
+class CreateProfilTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateManajerTable extends Migration
      */
     public function up()
     {
-        Schema::create('manajer', function (Blueprint $table) {
-            $table->bigIncrements('idManajer');
-            $table->string('namaManajer');
-            $table->string('jabatan');
+        Schema::create('profil', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nama_lengkap');
+            $table->string('email');
+            $table->string('foto');
         });
     }
 
@@ -27,6 +28,6 @@ class CreateManajerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('manajer');
+        Schema::dropIfExists('profiles');
     }
 }
